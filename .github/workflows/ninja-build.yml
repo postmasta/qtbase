@@ -97,7 +97,7 @@ jobs:
     - name: configure
       working-directory: build
       run:  "../source/configure -opensource -confirm-license -ccache -no-pch
-        -debug -nomake
+        -debug -nomake tests
         -prefix '${{ runner.temp }}'/install_dir
         ${{ matrix.configure_flags }}"
     - name: ninja
