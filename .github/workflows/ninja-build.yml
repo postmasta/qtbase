@@ -49,13 +49,13 @@ jobs:
         rm -rf "C:/Program Files/PostgreSQL/"
         choco install ccache --version 3.7.12 --yes --no-progress --not-silent --verbose --debug
 
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         path: source
 
     - name: restore ccache
       id: ccache
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: ${{ runner.temp }}/ccache
         # "github.run_id" is unique, which causes the cache to always get
